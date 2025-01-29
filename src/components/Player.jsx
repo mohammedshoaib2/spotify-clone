@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { assets, songsData } from "../assets/assets";
 import { useDispatch, useSelector } from "react-redux";
-import { setCurrentSong, togglePlay } from "../../features/playerSlice";
+import {
+  setCurrentSong,
+  togglePlay,
+  togglePlayTrue,
+} from "../../features/playerSlice";
 
 function Player() {
   const audioRef = useRef();
@@ -39,10 +43,11 @@ function Player() {
     const userSeekWidth = e.nativeEvent.offsetX;
     const userSeekPercentage = userSeekWidth / totalLengthOfSeek;
     audioRef.current.currentTime = totalDuration * userSeekPercentage;
+    dispatch(togglePlayTrue());
   };
 
   return (
-    <div className="h-[10%] w-full px-4 flex justify-between items-center grow-0 shrink-0 text-white">
+    <div className="h-[10%] w-full px-4 flex justify-center lg:justify-between items-center grow-0 shrink-0 text-white ">
       <div className="justify-start items-center gap-4 hidden lg:flex min-w-[160px]">
         <img className="w-12" src={track.image} alt="image" />
         <div>

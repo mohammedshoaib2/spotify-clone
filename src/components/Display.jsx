@@ -5,7 +5,7 @@ import DisplayAlbum from "./DisplayAlbum";
 
 function Display() {
   return (
-    <div className="w-full h-[100%] py-2 pr-2">
+    <div className="w-full h-[100%] max-sm:pl-2 py-2 pr-2 ">
       <Routes>
         <Route path="/" element={<DisplayHome />}></Route>
         <Route path="/album/:id" element={<DisplayAlbum />}></Route>

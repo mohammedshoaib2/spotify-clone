@@ -17,8 +17,13 @@ const playerSlice = createSlice({
     togglePlay: (state, action) => {
       state.isPlaying = !state.isPlaying;
     },
+
+    togglePlayTrue: (state, action) => {
+      state.isPlaying = true;
+    },
   },
 });
 
-export const { setCurrentSong, togglePlay } = playerSlice.actions;
+export const { setCurrentSong, togglePlay, togglePlayTrue } =
+  playerSlice.actions;
 export default playerSlice.reducer;

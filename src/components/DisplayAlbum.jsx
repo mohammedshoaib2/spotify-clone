@@ -20,17 +20,19 @@ function DisplayAlbum() {
       className={`h-full w-full bg-[#121212]  rounded p-5 text-white`}
     >
       <Navbar />
-      <div className="mt-10 flex flex-wrap gap-10 items-end">
+      <div className="mt-10 flex flex-wrap gap-10 justify-center md:justify-start  items-end">
         <img
           className="w-48 min-w-[192px] rounded"
           src={albumsData[id].image}
           alt="albumImage"
         />
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2  items-center md:items-start  ">
           <p>Playlist</p>
-          <h1 className="text-6xl font-bold">{albumsData[id].name}</h1>
-          <p>{albumsData[id].desc}</p>
-          <div className="flex justify-center items-center gap-1">
+          <h1 className="text-6xl font-bold text-center">
+            {albumsData[id].name}
+          </h1>
+          <p className="text-center ">{albumsData[id].desc}</p>
+          <div className="flex flex-wrap justify-center items-center gap-1">
             <img className="w-4" src={assets.spotify_logo} alt="logo" />
             <b>Spotify</b>
             <p>&#x2022;</p>
@@ -44,14 +46,14 @@ function DisplayAlbum() {
       </div>
 
       <div className="w-full mt-10 text-[#9F9F9F] text-sm">
-        <div className="grid grid-cols-4 justify-center items-center p-2">
+        <div className="grid grid-cols-2  md:grid-cols-3  lg:grid-cols-4  justify-center items-center p-2">
           <div className="flex gap-5">
             <p>#</p>
             <p>Title</p>
           </div>
           <p>Album</p>
-          <p>Date Added</p>
-          <img className="w-4" src={assets.clock_icon} alt="" />
+          <p className="hidden md:block">Date Added</p>
+          <img className="w-4 hidden lg:block" src={assets.clock_icon} alt="" />
         </div>
         <hr className="mt-4 border-none h-[1px] bg-[#9F9F9F]" />
         {songsData.map((song) => {

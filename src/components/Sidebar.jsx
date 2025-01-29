@@ -1,11 +1,18 @@
 import React from "react";
 import { assets } from "./../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
   return (
     <div className="h-[100%] w-[25%]  flex-col justify-start items-center p-2 text-white hidden lg:flex">
       <div className="h-[15%] w-full mb-2 rounded flex flex-col justify-center items-start gap-5 pl-8 bg-[#121212]">
-        <div className="flex justify-center items-center gap-3 font-bold cursor-pointer">
+        <div
+          onClick={() => {
+            navigate("/");
+          }}
+          className="flex justify-center items-center gap-3 font-bold cursor-pointer"
+        >
           <img className="h-[24px]" src={assets.home_icon} alt="home" />
           <p className="text-sm">Home</p>
         </div>
@@ -17,12 +24,24 @@ function Sidebar() {
       <div className="h-[85%] w-full rounded bg-[#121212] px-2 py-4">
         <div className="flex justify-between items-center px-2">
           <div className="flex justify-center items-center gap-2">
-            <img className="h-[30px]" src={assets.stack_icon} alt="stack" />
+            <img
+              className="h-[30px] cursor-pointer"
+              src={assets.stack_icon}
+              alt="stack"
+            />
             <p className="text-sm font-semibold">Your Library</p>
           </div>
           <div className="flex justify-center items-center gap-4">
-            <img className="h-[20px]" src={assets.arrow_icon} alt="arrow" />
-            <img className="h-[20px]" src={assets.plus_icon} alt="add" />
+            <img
+              className="h-[20px] cursor-pointer"
+              src={assets.arrow_icon}
+              alt="arrow"
+            />
+            <img
+              className="h-[20px] cursor-pointer"
+              src={assets.plus_icon}
+              alt="add"
+            />
           </div>
         </div>
 
