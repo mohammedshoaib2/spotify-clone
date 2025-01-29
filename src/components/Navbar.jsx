@@ -21,7 +21,7 @@ function Navbar() {
           <div className="flex justify-center items-center px-4 w-fit py-1 text-sm font-[500] bg-black text-white rounded-4xl cursor-pointer">
             Install App
           </div>
-          <div className="bg-[#A455F4] w-7 h-7 text-sm rounded-full flex justify-center items-center">
+          <div className="bg-[#A455F4] w-7 h-7 text-sm rounded-full flex justify-center items-center cursor-pointer">
             D
           </div>
         </div>
