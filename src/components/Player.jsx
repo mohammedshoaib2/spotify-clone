@@ -47,7 +47,7 @@ function Player() {
   };
 
   return (
-    <div className="h-[10%] w-full px-4 flex justify-center lg:justify-between items-center grow-0 shrink-0 text-white ">
+    <div className=" h-[20%] sm:h-[10%]  w-full px-4 flex justify-center lg:justify-between items-center grow-0 shrink-0 text-white ">
       <div className="justify-start items-center gap-4 hidden lg:flex min-w-[160px]">
         <img className="w-12" src={track.image} alt="image" />
         <div>
@@ -104,7 +104,7 @@ function Player() {
           <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
         </div>
         <div className=" flex justify-center items-center gap-4">
-          <p>{`${Math.floor(currentDuration / 60)
+          <p className="">{`${Math.floor(currentDuration / 60)
             .toString()
             .padStart(2, 0)} : ${Math.floor(currentDuration % 60)
             .toString()
