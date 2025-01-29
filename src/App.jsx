@@ -1,9 +1,6 @@
-import React from "react";
 import Sidebar from "./components/Sidebar";
 import Player from "./components/Player";
 import Display from "./components/Display";
-import { Route, Routes } from "react-router-dom";
-
 function App() {
   return (
     <div className="h-screen bg-black">
