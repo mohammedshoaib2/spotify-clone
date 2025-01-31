@@ -47,7 +47,7 @@ function Player() {
   };
 
   return (
-    <div className=" h-[20%] sm:h-[10%]  w-full px-4 flex justify-center m-auto lg:justify-between items-center grow-0 shrink-0 text-white ">
+    <div className="h-[20%] sm:h-[10%]  w-full px-4 flex justify-center m-auto lg:justify-between items-center grow-0 shrink-0 text-white ">
       <div className="justify-start items-center gap-4 hidden lg:flex min-w-[160px]">
         <img className="w-12" src={track.image} alt="image" />
         <div>
