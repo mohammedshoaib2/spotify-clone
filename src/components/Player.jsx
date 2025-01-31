@@ -104,7 +104,7 @@ function Player() {
           <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
         </div>
         <div className=" flex justify-center items-center gap-4">
-          <p>{`${Math.floor(currentDuration / 60)
+          <p className="hidden md:block">{`${Math.floor(currentDuration / 60)
             .toString()
             .padStart(2, 0)} : ${Math.floor(currentDuration % 60)
             .toString()
@@ -121,7 +121,7 @@ function Player() {
               className="h-1 border-none w-0 bg-green-800 rounded-full"
             />
           </div>
-          <p>{`${Math.floor(totalDuration / 60)
+          <p className="hidden md:block">{`${Math.floor(totalDuration / 60)
             .toString()
             .padStart(2, 0)} : ${Math.floor(totalDuration % 60)
             .toString()
